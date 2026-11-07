@@ -1,0 +1,55 @@
+{
+    "id":  "012",
+    "slug":  "rotate_array",
+    "title":  "Rotate Array",
+    "category":  "array",
+    "difficulty":  "Medium",
+    "topics":  [
+                   "array",
+                   "two-pointers"
+               ],
+    "companies":  [
+                      "meta"
+                  ],
+    "acceptance_rate":  55.1,
+    "templates":  {
+                      "python":  "def rotate(nums: list[int], k: int) -\u003e list[int]:\n    pass\n",
+                      "go":  "package main\n\nfunc rotate(nums []int, k int) []int {\n    return nil\n}\n"
+                  },
+    "test_cases":  [
+                       {
+                           "input":  {
+                                         "k":  2,
+                                         "nums":  [
+                                                      1,
+                                                      2,
+                                                      3,
+                                                      4
+                                                  ]
+                                     },
+                           "id":  "tc1",
+                           "is_hidden":  false,
+                           "expected":  [
+                                            3,
+                                            4,
+                                            1,
+                                            2
+                                        ]
+                       },
+                       {
+                           "input":  {
+                                         "k":  3,
+                                         "nums":  [
+                                                      1,
+                                                      2
+                                                  ]
+                                     },
+                           "id":  "tc2",
+                           "is_hidden":  false,
+                           "expected":  [
+                                            2,
+                                            1
+                                        ]
+                       }
+                   ]
+}

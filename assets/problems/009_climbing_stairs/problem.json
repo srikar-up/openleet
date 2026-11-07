@@ -1,0 +1,37 @@
+{
+    "id":  "009",
+    "slug":  "climbing_stairs",
+    "title":  "Climbing Stairs",
+    "category":  "dp",
+    "difficulty":  "Easy",
+    "topics":  [
+                   "dp",
+                   "memoization"
+               ],
+    "companies":  [
+                      "amazon"
+                  ],
+    "acceptance_rate":  51.7,
+    "templates":  {
+                      "python":  "def climb_stairs(n: int) -\u003e int:\n    pass\n",
+                      "go":  "package main\n\nfunc climbStairs(n int) int {\n    return 0\n}\n"
+                  },
+    "test_cases":  [
+                       {
+                           "input":  {
+                                         "n":  3
+                                     },
+                           "id":  "tc1",
+                           "is_hidden":  false,
+                           "expected":  3
+                       },
+                       {
+                           "input":  {
+                                         "n":  5
+                                     },
+                           "id":  "tc2",
+                           "is_hidden":  false,
+                           "expected":  8
+                       }
+                   ]
+}

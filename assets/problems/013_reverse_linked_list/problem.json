@@ -1,0 +1,50 @@
+{
+    "id":  "013",
+    "slug":  "reverse_linked_list",
+    "title":  "Reverse Linked List",
+    "category":  "link_list",
+    "difficulty":  "Easy",
+    "topics":  [
+                   "linked-list",
+                   "recursion"
+               ],
+    "companies":  [
+                      "meta",
+                      "google"
+                  ],
+    "acceptance_rate":  73.2,
+    "templates":  {
+                      "python":  "def reverse_list(head: list[int]) -\u003e list[int]:\n    pass\n",
+                      "go":  "package main\n\nfunc reverseList(head []int) []int {\n    return nil\n}\n"
+                  },
+    "test_cases":  [
+                       {
+                           "input":  {
+                                         "head":  [
+                                                      1,
+                                                      2,
+                                                      3
+                                                  ]
+                                     },
+                           "id":  "tc1",
+                           "is_hidden":  false,
+                           "expected":  [
+                                            3,
+                                            2,
+                                            1
+                                        ]
+                       },
+                       {
+                           "input":  {
+                                         "head":  [
+
+                                                  ]
+                                     },
+                           "id":  "tc2",
+                           "is_hidden":  false,
+                           "expected":  [
+
+                                        ]
+                       }
+                   ]
+}

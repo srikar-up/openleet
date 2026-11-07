@@ -1,0 +1,39 @@
+{
+  "id": "002",
+  "slug": "valid_parentheses",
+  "title": "Valid Parentheses",
+  "difficulty": "Easy",
+  "topics": ["string", "stack"],
+  "companies": ["amazon", "meta", "bloomberg"],
+  "acceptance_rate": 40.5,
+  "templates": {
+    "python": "class Solution:\n    def isValid(self, s: str) -> bool:\n        pass\n",
+    "go": "package main\n\nfunc isValid(s string) bool {\n    return false\n}\n"
+  },
+  "test_cases": [
+    {
+      "id": "tc1",
+      "input": {"s": "()"},
+      "expected": true,
+      "is_hidden": false
+    },
+    {
+      "id": "tc2",
+      "input": {"s": "()[]{}"},
+      "expected": true,
+      "is_hidden": false
+    },
+    {
+      "id": "tc3",
+      "input": {"s": "(]"},
+      "expected": false,
+      "is_hidden": false
+    },
+    {
+      "id": "tc4",
+      "input": {"s": "([)]"},
+      "expected": false,
+      "is_hidden": true
+    }
+  ]
+}

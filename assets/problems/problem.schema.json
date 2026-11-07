@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openleet.local/problem.schema.json",
+  "title": "OpenLeet problem",
+  "description": "One roadmap problem. Place this file at assets/problems/<id>_<slug>/problem.json and an optional statement at assets/problems/<id>_<slug>/description.md.",
+  "type": "object",
+  "required": [
+    "id",
+    "slug",
+    "title",
+    "difficulty",
+    "topics",
+    "templates",
+    "test_cases"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9]{3,}$",
+      "description": "Display ID. Problems are sorted by this value."
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$",
+      "description": "Stable machine name, usually snake_case."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "type": "string",
+      "enum": ["dsa", "cp", "dp", "array", "link_list", "graph"],
+      "default": "dsa",
+      "description": "Roadmap rail. Missing means dsa."
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["Easy", "Medium", "Hard"]
+    },
+    "description": {
+      "type": "string",
+      "description": "Markdown statement. description.md is preferred when present."
+    },
+    "topics": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "minItems": 1
+    },
+    "companies": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    },
+    "acceptance_rate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "templates": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"type": "string"},
+      "description": "Starter buffer keyed by language ID, e.g. python and go."
+    },
+    "test_cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "input", "expected"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "input": {
+            "description": "An object is passed as keyword arguments; an array is passed positionally.",
+            "type": ["object", "array", "string", "number", "boolean", "null"]
+          },
+          "expected": {
+            "description": "Value compared to the solution result.",
+            "type": ["object", "array", "string", "number", "boolean", "null"]
+          },
+          "is_hidden": {"type": "boolean", "default": false}
+        },
+        "additionalProperties": false
+      }
+    },
+    "scale_test_cases": {
+      "type": "object",
+      "description": "Optional fixtures grouped by scale (e.g. small, medium, large) for algorithmic curve benchmarking.",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["id", "input", "expected"],
+          "properties": {
+            "id": {"type": "string", "minLength": 1},
+            "input": {
+              "description": "An object is passed as keyword arguments; an array is passed positionally.",
+              "type": ["object", "array", "string", "number", "boolean", "null"]
+            },
+            "expected": {
+              "description": "Value compared to the solution result.",
+              "type": ["object", "array", "string", "number", "boolean", "null"]
+            },
+            "is_hidden": {"type": "boolean", "default": false}
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

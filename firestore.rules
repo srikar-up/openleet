@@ -1,0 +1,63 @@
+rules_version = '2';
+
+// Zero-trust Firestore policy for OpenLeet.
+//
+// Deploy with:
+//   firebase deploy --only firestore:rules
+//
+// Every client call uses the signed-in user's Firebase ID token. A user may
+// read, create, update, or delete exactly one profile document:
+// users/{their own uid}. The public ranking record lives at leaderboard/{uid}
+// and contains only name, score, solved, and updated; any signed-in user may
+// read the collection, but only the matching UID may write its own row.
+// There is no service-account path in the client, so these rules are the
+// authority.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{uid} {
+      allow read, delete: if request.auth != null
+                          && request.auth.uid == uid;
+
+      allow create, update: if request.auth != null
+                            && request.auth.uid == uid
+                            && request.resource.data.uid == uid
+                            && request.resource.data.keys().hasOnly([
+                                 'uid', 'user', 'score', 'updated', 'solved'
+                               ])
+                            && request.resource.data.uid is string
+                            && request.resource.data.user is string
+                            && request.resource.data.score is int
+                            && request.resource.data.updated is int
+                            && request.resource.data.solved is map;
+    }
+
+    match /leaderboard/{uid} {
+      // Ranking rows are readable by any signed-in user.
+      allow read: if request.auth != null;
+
+      // A user may only publish its own row, and the schema is fixed to the
+      // four minimal fields. No email, code, solved map, or UID body field.
+      allow create, update: if request.auth != null
+                            && request.auth.uid == uid
+                            && request.resource.data.keys().hasOnly([
+                                 'name', 'score', 'solved', 'updated'
+                               ])
+                            && request.resource.data.name is string
+                            && request.resource.data.name.size() <= 32
+                            && request.resource.data.score is int
+                            && request.resource.data.score >= 0
+                            && request.resource.data.solved is int
+                            && request.resource.data.solved >= 0
+                            && request.resource.data.updated is int
+                            && request.resource.data.updated >= 0;
+
+      allow delete: if request.auth != null
+                    && request.auth.uid == uid;
+    }
+
+    // Deny every other path by default.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

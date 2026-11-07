@@ -1,0 +1,52 @@
+{
+    "id":  "016",
+    "slug":  "course_schedule",
+    "title":  "Course Schedule",
+    "category":  "graph",
+    "difficulty":  "Medium",
+    "topics":  [
+                   "graph",
+                   "topological-sort"
+               ],
+    "companies":  [
+                      "meta",
+                      "google"
+                  ],
+    "acceptance_rate":  45.9,
+    "templates":  {
+                      "python":  "def can_finish(num_courses: int, prerequisites: list[list[int]]) -\u003e bool:\n    pass\n",
+                      "go":  "package main\n\nfunc canFinish(numCourses int, prerequisites [][]int) bool {\n    return false\n}\n"
+                  },
+    "test_cases":  [
+                       {
+                           "input":  {
+                                         "numCourses":  2,
+                                         "prerequisites":  [
+                                                               1,
+                                                               0
+                                                           ]
+                                     },
+                           "id":  "tc1",
+                           "is_hidden":  false,
+                           "expected":  true
+                       },
+                       {
+                           "input":  {
+                                         "numCourses":  2,
+                                         "prerequisites":  [
+                                                               [
+                                                                   1,
+                                                                   0
+                                                               ],
+                                                               [
+                                                                   0,
+                                                                   1
+                                                               ]
+                                                           ]
+                                     },
+                           "id":  "tc2",
+                           "is_hidden":  false,
+                           "expected":  false
+                       }
+                   ]
+}

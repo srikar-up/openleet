@@ -1,0 +1,38 @@
+{
+    "id":  "008",
+    "slug":  "prime_sieve",
+    "title":  "Prime Sieve",
+    "category":  "cp",
+    "difficulty":  "Medium",
+    "topics":  [
+                   "cp",
+                   "math",
+                   "number-theory"
+               ],
+    "companies":  [
+                      "codeforces"
+                  ],
+    "acceptance_rate":  61.2,
+    "templates":  {
+                      "python":  "def count_primes(n: int) -\u003e int:\n    pass\n",
+                      "go":  "package main\n\nfunc countPrimes(n int) int {\n    return 0\n}\n"
+                  },
+    "test_cases":  [
+                       {
+                           "input":  {
+                                         "n":  10
+                                     },
+                           "id":  "tc1",
+                           "is_hidden":  false,
+                           "expected":  4
+                       },
+                       {
+                           "input":  {
+                                         "n":  2
+                                     },
+                           "id":  "tc2",
+                           "is_hidden":  false,
+                           "expected":  0
+                       }
+                   ]
+}

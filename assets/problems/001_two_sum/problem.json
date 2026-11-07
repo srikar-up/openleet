@@ -1,0 +1,39 @@
+{
+  "id": "001",
+  "slug": "two_sum",
+  "title": "Two Sum",
+  "difficulty": "Easy",
+  "topics": ["array", "hash-table"],
+  "companies": ["google", "amazon", "meta"],
+  "acceptance_rate": 50.8,
+  "templates": {
+    "python": "class Solution:\n    def twoSum(self, nums: list[int], target: int) -> list[int]:\n        pass\n",
+    "go": "package main\n\nfunc twoSum(nums []int, target int) []int {\n    return nil\n}\n"
+  },
+  "test_cases": [
+    {
+      "id": "tc1",
+      "input": {"nums": [2, 7, 11, 15], "target": 9},
+      "expected": [0, 1],
+      "is_hidden": false
+    },
+    {
+      "id": "tc2",
+      "input": {"nums": [3, 2, 4], "target": 6},
+      "expected": [1, 2],
+      "is_hidden": false
+    },
+    {
+      "id": "tc3",
+      "input": {"nums": [3, 3], "target": 6},
+      "expected": [0, 1],
+      "is_hidden": false
+    },
+    {
+      "id": "tc4",
+      "input": {"nums": [-1, -2, -3, -4, -5], "target": -8},
+      "expected": [2, 4],
+      "is_hidden": true
+    }
+  ]
+}

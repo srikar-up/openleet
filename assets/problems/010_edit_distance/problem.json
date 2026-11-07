@@ -1,0 +1,40 @@
+{
+    "id":  "010",
+    "slug":  "edit_distance",
+    "title":  "Edit Distance",
+    "category":  "dp",
+    "difficulty":  "Hard",
+    "topics":  [
+                   "dp",
+                   "string"
+               ],
+    "companies":  [
+                      "google",
+                      "amazon"
+                  ],
+    "acceptance_rate":  44.8,
+    "templates":  {
+                      "python":  "def min_distance(word1: str, word2: str) -\u003e int:\n    pass\n",
+                      "go":  "package main\n\nfunc minDistance(word1 string, word2 string) int {\n    return 0\n}\n"
+                  },
+    "test_cases":  [
+                       {
+                           "input":  {
+                                         "word2":  "ros",
+                                         "word1":  "horse"
+                                     },
+                           "id":  "tc1",
+                           "is_hidden":  false,
+                           "expected":  3
+                       },
+                       {
+                           "input":  {
+                                         "word2":  "execution",
+                                         "word1":  "intention"
+                                     },
+                           "id":  "tc2",
+                           "is_hidden":  false,
+                           "expected":  5
+                       }
+                   ]
+}

@@ -1,0 +1,42 @@
+# --- Secrets ---------------------------------------------------------------
+.env
+.env.*
+!.env.example
+secrets/
+*service-account*.json
+*.pem
+*.key
+
+# --- Local data ------------------------------------------------------------
+openleet_data.enc
+*.enc
+
+# --- Build artifacts -------------------------------------------------------
+bin/
+dist/
+*.exe
+*.test
+*.out
+coverage.*
+
+# --- Internal notes and third-party references -----------------------------
+# These are working documents and reference checkouts, not part of the product.
+.agents/
+agents.md
+figma mockups/
+skills-lock.json
+opencode.json
+openleet_master_architecture_roadmap.md
+settings-tabbed-revert.diff
+jev.txt
+future fetures.txt
+typescript
+scripts/route-jev.ps1
+
+# --- Editor and OS ---------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo

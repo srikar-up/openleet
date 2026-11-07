@@ -1,0 +1,33 @@
+{
+  "id": "003",
+  "slug": "merge_two_sorted_lists",
+  "title": "Merge Two Sorted Lists",
+  "difficulty": "Easy",
+  "topics": ["linked-list", "recursion"],
+  "companies": ["microsoft", "apple", "amazon"],
+  "acceptance_rate": 62.7,
+  "templates": {
+    "python": "class Solution:\n    def mergeTwoLists(self, list1: list[int], list2: list[int]) -> list[int]:\n        pass\n",
+    "go": "package main\n\nfunc mergeTwoLists(list1 []int, list2 []int) []int {\n    return nil\n}\n"
+  },
+  "test_cases": [
+    {
+      "id": "tc1",
+      "input": {"list1": [1, 2, 4], "list2": [1, 3, 4]},
+      "expected": [1, 1, 2, 3, 4, 4],
+      "is_hidden": false
+    },
+    {
+      "id": "tc2",
+      "input": {"list1": [], "list2": []},
+      "expected": [],
+      "is_hidden": false
+    },
+    {
+      "id": "tc3",
+      "input": {"list1": [], "list2": [0]},
+      "expected": [0],
+      "is_hidden": false
+    }
+  ]
+}

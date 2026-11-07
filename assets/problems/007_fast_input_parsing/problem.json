@@ -1,0 +1,45 @@
+{
+    "id":  "007",
+    "slug":  "fast_input_parsing",
+    "title":  "Fast Input Parsing",
+    "category":  "cp",
+    "difficulty":  "Easy",
+    "topics":  [
+                   "cp",
+                   "io"
+               ],
+    "companies":  [
+                      "codeforces"
+                  ],
+    "acceptance_rate":  72.4,
+    "templates":  {
+                      "python":  "def solve(nums: list[int]) -\u003e int:\n    pass\n",
+                      "go":  "package main\n\nfunc solve(nums []int) int {\n    return 0\n}\n"
+                  },
+    "test_cases":  [
+                       {
+                           "input":  {
+                                         "nums":  [
+                                                      1,
+                                                      2,
+                                                      3,
+                                                      4
+                                                  ]
+                                     },
+                           "id":  "tc1",
+                           "is_hidden":  false,
+                           "expected":  10
+                       },
+                       {
+                           "input":  {
+                                         "nums":  [
+                                                      -5,
+                                                      5
+                                                  ]
+                                     },
+                           "id":  "tc2",
+                           "is_hidden":  false,
+                           "expected":  0
+                       }
+                   ]
+}

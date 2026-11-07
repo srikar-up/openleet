@@ -1,0 +1,40 @@
+{
+  "id": "017",
+  "slug": "contains_duplicate",
+  "title": "Contains Duplicate",
+  "category": "array",
+  "difficulty": "Easy",
+  "topics": ["array", "hash-table", "sorting"],
+  "companies": ["apple", "microsoft", "amazon"],
+  "acceptance_rate": 61.2,
+  "templates": {
+    "python": "class Solution:\n    def containsDuplicate(self, nums: list[int]) -> bool:\n        pass\n",
+    "go": "package main\n\nfunc containsDuplicate(nums []int) bool {\n    return false\n}\n"
+  },
+  "test_cases": [
+    {
+      "id": "tc1",
+      "input": {"nums": [1, 2, 3, 1]},
+      "expected": true,
+      "is_hidden": false
+    },
+    {
+      "id": "tc2",
+      "input": {"nums": [1, 2, 3, 4]},
+      "expected": false,
+      "is_hidden": false
+    },
+    {
+      "id": "tc3",
+      "input": {"nums": [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]},
+      "expected": true,
+      "is_hidden": false
+    },
+    {
+      "id": "tc4",
+      "input": {"nums": [0, 4, 5, 0]},
+      "expected": true,
+      "is_hidden": true
+    }
+  ]
+}
