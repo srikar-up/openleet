@@ -34,7 +34,13 @@ func main() {
 	settingsSection := flag.String("settings-section", "", "settings category to open: general, appearance, ai, data, ...")
 	themeName := flag.String("theme", "", "override the configured theme for this run")
 	listThemes := flag.Bool("list-themes", false, "print available themes and exit")
+	showVersion := flag.Bool("version", false, "print the version and exit")
 	flag.Parse()
+
+	if *showVersion {
+		fmt.Printf("OpenLeet %s\n", settings.BuildVersion)
+		return
+	}
 
 	if *listThemes {
 		for _, palette := range theme.All() {

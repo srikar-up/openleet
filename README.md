@@ -155,6 +155,7 @@ Desktop client secrets are not confidential; the flow still uses PKCE and a loop
 ./bin/openleet --view settings --settings-section ai
 ./bin/openleet --view roadmap --theme openleet-light
 ./bin/openleet --list-themes
+./bin/openleet --version
 ```
 
 ## Keyboard map

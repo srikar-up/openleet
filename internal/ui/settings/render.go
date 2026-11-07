@@ -676,9 +676,14 @@ func humanBytes(size int64) string {
 	return fmt.Sprintf("%.1f %cB", float64(size)/float64(div), "KMGT"[exp])
 }
 
+// BuildVersion is shown in Settings -> About. Release builds override it:
+//
+//	go build -ldflags "-X openleet/internal/ui/settings.BuildVersion=v0.5.0-beta"
+var BuildVersion = "dev"
+
 func (m Model) renderAbout(width int) string {
-	version := "dev"
-	if info, ok := debug.ReadBuildInfo(); ok && info.Main.Version != "" {
+	version := BuildVersion
+	if info, ok := debug.ReadBuildInfo(); ok && info.Main.Version != "" && info.Main.Version != "(devel)" {
 		version = info.Main.Version
 	}
 	lines := []string{

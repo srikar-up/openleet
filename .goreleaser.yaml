@@ -20,7 +20,7 @@ builds:
       - amd64
       - arm64
     ldflags:
-      - -s -w -X main.version={{.Version}}
+      - -s -w -X openleet/internal/ui/settings.BuildVersion={{.Version}}
 
   - id: jev-route
     main: ./cmd/jev-route/main.go
@@ -35,7 +35,7 @@ builds:
       - amd64
       - arm64
     ldflags:
-      - -s -w -X main.version={{.Version}}
+      - -s -w -X openleet/internal/ui/settings.BuildVersion={{.Version}}
 
 archives:
   - format: tar.gz
