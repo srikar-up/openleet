@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the documentation
+    url: https://github.com/srikar-up/openleet#readme
+    about: Build, install, keyboard shortcuts, themes, and AI provider setup.
+  - name: Report a security vulnerability
+    url: https://github.com/srikar-up/openleet/security/advisories/new
+    about: Please report secret-handling or auth issues privately, not as a public issue.

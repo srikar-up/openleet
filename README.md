@@ -315,6 +315,16 @@ OpenLeet is under active development.
 - [Glamour](https://github.com/charmbracelet/glamour)
 - [VHS](https://github.com/charmbracelet/vhs) for visual receipts
 
+## Support
+
+- [Report a bug](https://github.com/srikar-up/openleet/issues/new?template=bug_report.yml)
+- [Request a feature](https://github.com/srikar-up/openleet/issues/new?template=feature_request.yml)
+- [Ask something else or flag an out-of-scope idea](https://github.com/srikar-up/openleet/issues/new?template=other.yml)
+- [Report a security vulnerability privately](https://github.com/srikar-up/openleet/security/advisories/new)
+
+The issue forms ask for the app version, terminal, and operating system up front,
+and include a free-form "Other" path when a report does not fit a template.
+
 ## Contributing
 
 Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening

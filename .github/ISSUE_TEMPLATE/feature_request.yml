@@ -1,0 +1,77 @@
+name: Feature request
+description: Suggest an improvement to the practice loop, UI, or developer experience.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. Describe the problem first, then the smallest
+        change that would solve it. Large additions may be declined if they do not
+        fit a local-first terminal app.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of OpenLeet would this change?
+      options:
+        - Home
+        - Roadmap
+        - Solve workspace
+        - Runner (Python / Go)
+        - Coach / AI provider
+        - Stats
+        - Settings
+        - Themes / appearance
+        - Account / sync / leaderboard
+        - Installer / release
+        - Documentation
+        - Developer tooling
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the current friction or missing capability.
+      placeholder: I have to leave the keyboard to change the runner timeout.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Keep it concrete. A sketch of the keybinding or layout helps.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Existing shortcuts, settings, or workarounds you tried.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      description: How well does this fit the current product?
+      options:
+        - Fits the current app
+        - Not sure
+        - Outside the current scope
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and discussions for this idea.
+          required: true

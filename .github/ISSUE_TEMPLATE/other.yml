@@ -1,0 +1,53 @@
+name: Other / out of scope
+description: Questions, complaints, documentation fixes, or ideas that do not fit the other forms.
+title: "[Other]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for anything that is not a clear bug or feature request.
+        Out-of-scope ideas, criticism, and "this is confusing" reports are welcome;
+        they help us decide what to document or simplify. Remove secrets and
+        personal data before submitting.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of report is this?
+      options:
+        - Question
+        - Usability complaint
+        - Documentation problem
+        - Out-of-scope idea
+        - Build / packaging problem
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: message
+    attributes:
+      label: Tell us what is on your mind
+      description: Include the screen, version, and terminal size if they are relevant.
+      placeholder: The installer is not clear about which file to download on macOS.
+    validations:
+      required: true
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact (optional)
+      description: Leave blank to keep the discussion in this issue.
+      placeholder: "@handle or email"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I removed API keys, tokens, email addresses, and private paths from this report.
+          required: true
+        - label: This is not a security vulnerability. I will use the private advisory link for those.
+          required: true

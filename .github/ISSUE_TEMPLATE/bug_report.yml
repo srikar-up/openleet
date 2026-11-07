@@ -1,0 +1,111 @@
+name: Bug report
+description: Something broke, rendered incorrectly, or behaved unexpectedly.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please search existing issues
+        first, and remove API keys, tokens, email addresses, and local paths from
+        anything you paste.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of OpenLeet is affected?
+      options:
+        - Home
+        - Roadmap
+        - Solve workspace
+        - Runner (Python / Go)
+        - Coach / AI provider
+        - Stats
+        - Settings
+        - Themes / appearance
+        - Account / sync / leaderboard
+        - Installer / release
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: OpenLeet version
+      description: Run `openleet --version` when available, or name the release tag.
+      placeholder: v0.5.0-beta
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows 11
+        - Windows 10
+        - Linux
+        - macOS
+        - WSL
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: terminal
+    attributes:
+      label: Terminal and size
+      description: For example `Windows Terminal 160x45` or `iTerm2 120x40`.
+      placeholder: Windows Terminal, 160x45
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the actual behaviour. Include the exact error text if there is one.
+      placeholder: The top bar wrapped to a second row after resizing to 100 columns.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: A short numbered list is enough.
+      placeholder: |
+        1. Open OpenLeet with `--view roadmap`.
+        2. Resize the terminal to 100 columns.
+        3. Press F6.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      placeholder: The header should stay on one row and the labels should shorten.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or logs
+      description: Drag images here. Remove secrets and personal data first.
+      render: text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+        - label: I removed API keys, tokens, email addresses, and private paths from this report.
+          required: true
