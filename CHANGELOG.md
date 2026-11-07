@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-11-08 — v0.5.0-beta
+
+The first public beta.
+
+### Added
+
+- Windows (x86_64, arm64), Linux (x86_64, arm64), and macOS (x86_64, arm64)
+  release archives with SHA-256 checksums.
+- `openleet --version`, and a version line in Settings → About.
+- Structured GitHub issue forms for bugs, feature requests, and anything else,
+  including an explicit out-of-scope path.
+- A Windows installer that selects the matching architecture, accepts
+  prereleases, and verifies the downloaded checksum.
+
+### Verification
+
+- `go vet ./...` and `go test ./... -count=1` pass.
+- GitHub Actions build, vet, and test job passes on the release commit.
+- Windows and Linux amd64 archives were extracted and smoke-tested.
+
 ## 2026-11-07 — Terminal header redesign and Home stats
 
 ### Changed
