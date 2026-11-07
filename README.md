@@ -129,7 +129,7 @@ irm https://raw.githubusercontent.com/srikar-up/openleet/main/install.ps1 | iex
 
 The installer uses a local build when Go is available, otherwise it downloads the
 latest published release archive and verifies its checksum. To pin a version, set
-`OPENLEET_VERSION`, for example `v1.0.0`. From a clone, `.\install.ps1` works too.
+`OPENLEET_VERSION`, for example `v0.5.0-beta`. From a clone, `.\install.ps1` works too.
 
 ### Optional Firebase account and leaderboard
 

@@ -53,14 +53,22 @@ if (-not $SourceExe) {
     Write-Host "Downloading the latest Windows release..." -ForegroundColor Yellow
 
     $headers = @{ "User-Agent" = "openleet-installer" }
-    $releaseUrl = if ($env:OPENLEET_VERSION) {
-        "https://api.github.com/repos/$Repo/releases/tags/$($env:OPENLEET_VERSION)"
+    if ($env:OPENLEET_VERSION) {
+        $release = Invoke-RestMethod -Uri "https://api.github.com/repos/$Repo/releases/tags/$($env:OPENLEET_VERSION)" -Headers $headers
     } else {
-        "https://api.github.com/repos/$Repo/releases/latest"
+        # /releases/latest hides prereleases, so list instead.
+        $releases = Invoke-RestMethod -Uri "https://api.github.com/repos/$Repo/releases?per_page=1" -Headers $headers
+        $release = $releases | Select-Object -First 1
     }
-    $release = Invoke-RestMethod -Uri $releaseUrl -Headers $headers
+    if (-not $release) {
+        throw "No OpenLeet release is published yet. Install Go and run this script from a clone instead."
+    }
 
-    $asset = $release.assets | Where-Object { $_.name -like "openleet_Windows_*.zip" } | Select-Object -First 1
+    $assetName = if ($env:PROCESSOR_ARCHITECTURE -eq "ARM64") { "openleet_Windows_arm64.zip" } else { "openleet_Windows_x86_64.zip" }
+    $asset = $release.assets | Where-Object { $_.name -eq $assetName } | Select-Object -First 1
+    if (-not $asset) {
+        $asset = $release.assets | Where-Object { $_.name -like "openleet_Windows_*.zip" } | Select-Object -First 1
+    }
     if (-not $asset) {
         throw "No Windows release asset found in $($release.tag_name). Install Go and run this script from a clone instead."
     }
