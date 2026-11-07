@@ -1,10 +1,13 @@
-name: Other / out of scope
+name: 💬 Other / Out of Scope
 description: Questions, complaints, documentation fixes, or ideas that do not fit the other forms.
 title: "[Other]: "
+labels: ["question"]
 body:
   - type: markdown
     attributes:
       value: |
+        ## 📝 YOUR REPORT
+
         Use this form for anything that is not a clear bug or feature request.
         Out-of-scope ideas, criticism, and "this is confusing" reports are welcome;
         they help us decide what to document or simplify. Remove secrets and
@@ -27,7 +30,7 @@ body:
   - type: textarea
     id: message
     attributes:
-      label: Tell us what is on your mind
+      label: Tell Us What Is on Your Mind
       description: Include the screen, version, and terminal size if they are relevant.
       placeholder: The installer is not clear about which file to download on macOS.
     validations:
@@ -42,10 +45,15 @@ body:
     validations:
       required: false
 
+  - type: markdown
+    attributes:
+      value: |
+        ## ✅ VERIFICATION
+
   - type: checkboxes
     id: checks
     attributes:
-      label: Before submitting
+      label: Verification
       options:
         - label: I removed API keys, tokens, email addresses, and private paths from this report.
           required: true

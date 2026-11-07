@@ -1,13 +1,52 @@
-name: Bug report
-description: Something broke, rendered incorrectly, or behaved unexpectedly.
+name: 🐛 Bug Report
+description: Report a bug with our clean user interface form.
 title: "[Bug]: "
+labels: ["bug", "triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to report a bug. Please search existing issues
-        first, and remove API keys, tokens, email addresses, and local paths from
-        anything you paste.
+        ## 📋 SYSTEM INFORMATION
+
+        Thanks for reporting a bug. Please search existing issues before opening a
+        new one, and remove API keys, tokens, email addresses, and private paths
+        from anything you paste.
+
+  - type: input
+    id: version
+    attributes:
+      label: App Version
+      description: Run `openleet --version` and paste the exact output.
+      placeholder: e.g. v0.5.0-beta
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - Windows
+        - Linux
+        - macOS
+        - WSL
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: terminal
+    attributes:
+      label: Terminal and Size
+      description: The terminal name and columns x rows, if relevant.
+      placeholder: e.g. Windows Terminal 160x45
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 💻 THE PROBLEM
 
   - type: dropdown
     id: area
@@ -30,81 +69,54 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: version
-    attributes:
-      label: OpenLeet version
-      description: Run `openleet --version` when available, or name the release tag.
-      placeholder: v0.5.0-beta
-    validations:
-      required: true
-
-  - type: dropdown
-    id: os
-    attributes:
-      label: Operating system
-      options:
-        - Windows 11
-        - Windows 10
-        - Linux
-        - macOS
-        - WSL
-        - Other
-    validations:
-      required: true
-
-  - type: input
-    id: terminal
-    attributes:
-      label: Terminal and size
-      description: For example `Windows Terminal 160x45` or `iTerm2 120x40`.
-      placeholder: Windows Terminal, 160x45
-    validations:
-      required: true
-
   - type: textarea
-    id: what-happened
+    id: behavior
     attributes:
       label: What happened?
-      description: Describe the actual behaviour. Include the exact error text if there is one.
-      placeholder: The top bar wrapped to a second row after resizing to 100 columns.
+      placeholder: Describe what went wrong...
     validations:
       required: true
 
   - type: textarea
     id: steps
     attributes:
-      label: Steps to reproduce
-      description: A short numbered list is enough.
+      label: Steps to Reproduce
       placeholder: |
-        1. Open OpenLeet with `--view roadmap`.
-        2. Resize the terminal to 100 columns.
-        3. Press F6.
+        1. Go to...
+        2. Click on...
+        3. Scroll down to...
     validations:
       required: true
 
   - type: textarea
     id: expected
     attributes:
-      label: Expected behaviour
-      placeholder: The header should stay on one row and the labels should shorten.
+      label: Expected Behavior
+      placeholder: Describe what should have happened...
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: evidence
     attributes:
-      label: Screenshots or logs
+      label: Screenshots or Logs
       description: Drag images here. Remove secrets and personal data first.
       render: text
     validations:
       required: false
 
+  - type: markdown
+    attributes:
+      value: |
+        ## ✅ VERIFICATION
+
   - type: checkboxes
     id: checks
     attributes:
-      label: Before submitting
+      label: Verification
       options:
+        - label: I am using the latest version of the app.
+          required: true
         - label: I searched existing issues and did not find a duplicate.
           required: true
         - label: I removed API keys, tokens, email addresses, and private paths from this report.

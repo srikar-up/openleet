@@ -1,13 +1,16 @@
-name: Feature request
+name: ✨ Feature Request
 description: Suggest an improvement to the practice loop, UI, or developer experience.
 title: "[Feature]: "
+labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for the suggestion. Describe the problem first, then the smallest
-        change that would solve it. Large additions may be declined if they do not
-        fit a local-first terminal app.
+        ## 💡 THE IDEA
+
+        Describe the problem first, then the smallest change that would solve it.
+        Large additions may be declined if they do not fit a local-first terminal
+        app.
 
   - type: dropdown
     id: area
@@ -43,18 +46,24 @@ body:
   - type: textarea
     id: proposal
     attributes:
-      label: Proposed solution
+      label: Proposed Solution
       description: Keep it concrete. A sketch of the keybinding or layout helps.
+      placeholder: Add a settings field and a `/timeout` palette command...
     validations:
       required: true
 
   - type: textarea
     id: alternatives
     attributes:
-      label: Alternatives considered
+      label: Alternatives Considered
       description: Existing shortcuts, settings, or workarounds you tried.
     validations:
       required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎯 SCOPE
 
   - type: dropdown
     id: scope
@@ -68,10 +77,17 @@ body:
     validations:
       required: true
 
+  - type: markdown
+    attributes:
+      value: |
+        ## ✅ VERIFICATION
+
   - type: checkboxes
     id: checks
     attributes:
-      label: Before submitting
+      label: Verification
       options:
         - label: I searched existing issues and discussions for this idea.
+          required: true
+        - label: This request does not include secrets or personal data.
           required: true
