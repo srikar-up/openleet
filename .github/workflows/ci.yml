@@ -26,6 +26,12 @@ jobs:
       - name: Check screenshot format
         run: test -z "$(find readme/screenshots -name '*.png')"
 
+      - name: Validate version feed
+        run: python3 scripts/validate-version-json.py
+
+      - name: Check installer syntax
+        run: bash -n install.sh
+
       - name: Check formatting
         run: test -z "$(gofmt -l .)"
 

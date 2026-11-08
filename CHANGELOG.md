@@ -13,6 +13,12 @@ The first public beta.
   including an explicit out-of-scope path.
 - A Windows installer that selects the matching architecture, accepts
   prereleases, and verifies the downloaded checksum.
+- A Linux/macOS installer (`install.sh`) with `curl` and `wget` one-liners that
+  detects the architecture, verifies the checksum, and installs to
+  `~/.local/bin`.
+- `version.json`, a machine-readable release feed with direct Windows, Linux,
+  and macOS downloads, install commands, and SHA-256 checksums, refreshed by a
+  release workflow.
 
 ### Changed
 

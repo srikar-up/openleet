@@ -18,6 +18,8 @@ dist/
 *.test
 *.out
 coverage.*
+__pycache__/
+*.py[cod]
 
 # --- Internal notes and third-party references -----------------------------
 # These are working documents and reference checkouts, not part of the product.

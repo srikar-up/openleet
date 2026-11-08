@@ -36,9 +36,23 @@ Local-first · Python + Go · 12 themes · Windows, Linux, macOS
 irm https://raw.githubusercontent.com/srikar-up/openleet/main/install.ps1 | iex
 ```
 
-Extract the archive and run `openleet` (or `openleet.exe`). The app needs a terminal of at least **100×30**. Python 3 and Go are optional and detected at runtime.
+**Linux / macOS installer**
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/srikar-up/openleet/main/install.sh | bash
+# or
+wget -qO- https://raw.githubusercontent.com/srikar-up/openleet/main/install.sh | bash
+```
+
+The Unix installer detects Linux/macOS and x86_64/arm64, verifies the release
+SHA-256, and installs to `~/.local/bin` (`/usr/local/bin` as root). Override the
+directory with `OPENLEET_INSTALL_DIR`.
+
+Prefer a direct archive? Extract it and run `openleet` (or `openleet.exe`). The app needs a terminal of at least **100×30**. Python 3 and Go are optional and detected at runtime.
 
 Beta builds are unsigned. Windows amd64 and Linux amd64 are the smoke-tested targets.
+
+Building a download page? Use [`version.json`](version.json) instead of scraping GitHub — it carries the latest tag, direct links, install commands, and SHA-256 checksums. [Feed docs →](readme/VERSION_FEED.md)
 
 ## What it does
 
@@ -84,6 +98,7 @@ go test ./... -count=1
 | [Keys](readme/website/06-KEYBINDINGS.md) | Every shortcut by screen |
 | [Architecture](readme/ARCHITECTURE.md) | Elm loop, event pipeline, rendering |
 | [Screenshots](readme/SCREENSHOTS.md) | Every screen and theme |
+| [Version feed](readme/VERSION_FEED.md) | Machine-readable release JSON for websites |
 | [Website](readme/website/README.md) | Brand, copy, assets, launch checklist |
 | [Changelog](CHANGELOG.md) | Release history |
 | [Contributing](CONTRIBUTING.md) | Build, test, and PR rules |

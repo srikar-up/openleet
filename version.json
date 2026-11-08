@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "name": "OpenLeet",
+  "repo": "srikar-up/openleet",
+  "homepage": "https://github.com/srikar-up/openleet",
+  "latest": {
+    "name": "OpenLeet v0.5.0-beta",
+    "tag": "v0.5.0-beta",
+    "version": "0.5.0-beta",
+    "channel": "beta",
+    "prerelease": true,
+    "draft": false,
+    "publishedAt": "2026-11-07T18:23:18Z",
+    "releaseUrl": "https://github.com/srikar-up/openleet/releases/tag/v0.5.0-beta",
+    "checksumsUrl": "https://github.com/srikar-up/openleet/releases/download/v0.5.0-beta/checksums.txt"
+  },
+  "downloads": {
+    "windows": {
+      "x86_64": {
+        "url": "https://github.com/srikar-up/openleet/releases/download/v0.5.0-beta/openleet_Windows_x86_64.zip",
+        "apiUrl": "https://api.github.com/repos/srikar-up/openleet/releases/assets/721578755",
+        "name": "openleet_Windows_x86_64.zip",
+        "size": 7106941,
+        "sizeHuman": "6.8 MB",
+        "sha256": "3a1da0b89f7aff68f91ae756919ad3dcad71861a00997ff14975f98a5ff0940f",
+        "archive": "zip",
+        "binary": "openleet.exe"
+      },
+      "arm64": {
+        "url": "https://github.com/srikar-up/openleet/releases/download/v0.5.0-beta/openleet_Windows_arm64.zip",
+        "apiUrl": "https://api.github.com/repos/srikar-up/openleet/releases/assets/721578662",
+        "name": "openleet_Windows_arm64.zip",
+        "size": 6401897,
+        "sizeHuman": "6.1 MB",
+        "sha256": "100ea5aca31ed046ec6f13885b9aa81775afb81b5f339d05ba04c38886ad6bce",
+        "archive": "zip",
+        "binary": "openleet.exe"
+      }
+    },
+    "linux": {
+      "x86_64": {
+        "url": "https://github.com/srikar-up/openleet/releases/download/v0.5.0-beta/openleet_Linux_x86_64.tar.gz",
+        "apiUrl": "https://api.github.com/repos/srikar-up/openleet/releases/assets/721579173",
+        "name": "openleet_Linux_x86_64.tar.gz",
+        "size": 6967150,
+        "sizeHuman": "6.6 MB",
+        "sha256": "12ad37b477040db8d1f2c77ed5d960ce08adabb6afb1beaf027ff33d6aafdd5a",
+        "archive": "tar.gz",
+        "binary": "openleet"
+      },
+      "arm64": {
+        "url": "https://github.com/srikar-up/openleet/releases/download/v0.5.0-beta/openleet_Linux_arm64.tar.gz",
+        "apiUrl": "https://api.github.com/repos/srikar-up/openleet/releases/assets/721579062",
+        "name": "openleet_Linux_arm64.tar.gz",
+        "size": 6330488,
+        "sizeHuman": "6.0 MB",
+        "sha256": "e8fd07087e91a9a58ec6ae60d3813179a8b757783cb000c25233cda6fee06bfe",
+        "archive": "tar.gz",
+        "binary": "openleet"
+      }
+    },
+    "macos": {
+      "x86_64": {
+        "url": "https://github.com/srikar-up/openleet/releases/download/v0.5.0-beta/openleet_Darwin_x86_64.tar.gz",
+        "apiUrl": "https://api.github.com/repos/srikar-up/openleet/releases/assets/721578971",
+        "name": "openleet_Darwin_x86_64.tar.gz",
+        "size": 7063516,
+        "sizeHuman": "6.7 MB",
+        "sha256": "c14e3eb6e8292447612cdc3ce6028aa2ea243ab084fd0b5d4d09637125c30b30",
+        "archive": "tar.gz",
+        "binary": "openleet"
+      },
+      "arm64": {
+        "url": "https://github.com/srikar-up/openleet/releases/download/v0.5.0-beta/openleet_Darwin_arm64.tar.gz",
+        "apiUrl": "https://api.github.com/repos/srikar-up/openleet/releases/assets/721578860",
+        "name": "openleet_Darwin_arm64.tar.gz",
+        "size": 6607740,
+        "sizeHuman": "6.3 MB",
+        "sha256": "133d2fff98149e151cc30a9e79ef7d3e27b0282b0434f9874d303b1a72497582",
+        "archive": "tar.gz",
+        "binary": "openleet"
+      }
+    }
+  },
+  "install": {
+    "windows": {
+      "url": "https://raw.githubusercontent.com/srikar-up/openleet/main/install.ps1",
+      "powershell": "irm https://raw.githubusercontent.com/srikar-up/openleet/main/install.ps1 | iex",
+      "x86_64": {
+        "curl": "curl.exe -fsSL https://github.com/srikar-up/openleet/releases/download/v0.5.0-beta/openleet_Windows_x86_64.zip -o openleet.zip && tar -xf openleet.zip"
+      },
+      "arm64": {
+        "curl": "curl.exe -fsSL https://github.com/srikar-up/openleet/releases/download/v0.5.0-beta/openleet_Windows_arm64.zip -o openleet.zip && tar -xf openleet.zip"
+      }
+    },
+    "linux": {
+      "installer": {
+        "url": "https://raw.githubusercontent.com/srikar-up/openleet/main/install.sh",
+        "curl": "curl -fsSL https://raw.githubusercontent.com/srikar-up/openleet/main/install.sh | bash",
+        "wget": "wget -qO- https://raw.githubusercontent.com/srikar-up/openleet/main/install.sh | bash"
+      },
+      "x86_64": {
+        "curl": "curl -fsSL https://github.com/srikar-up/openleet/releases/download/v0.5.0-beta/openleet_Linux_x86_64.tar.gz -o openleet.tar.gz && tar -xzf openleet.tar.gz",
+        "wget": "wget -q https://github.com/srikar-up/openleet/releases/download/v0.5.0-beta/openleet_Linux_x86_64.tar.gz -O openleet.tar.gz && tar -xzf openleet.tar.gz"
+      },
+      "arm64": {
+        "curl": "curl -fsSL https://github.com/srikar-up/openleet/releases/download/v0.5.0-beta/openleet_Linux_arm64.tar.gz -o openleet.tar.gz && tar -xzf openleet.tar.gz",
+        "wget": "wget -q https://github.com/srikar-up/openleet/releases/download/v0.5.0-beta/openleet_Linux_arm64.tar.gz -O openleet.tar.gz && tar -xzf openleet.tar.gz"
+      }
+    },
+    "macos": {
+      "installer": {
+        "url": "https://raw.githubusercontent.com/srikar-up/openleet/main/install.sh",
+        "curl": "curl -fsSL https://raw.githubusercontent.com/srikar-up/openleet/main/install.sh | bash",
+        "wget": "wget -qO- https://raw.githubusercontent.com/srikar-up/openleet/main/install.sh | bash"
+      },
+      "x86_64": {
+        "curl": "curl -fsSL https://github.com/srikar-up/openleet/releases/download/v0.5.0-beta/openleet_Darwin_x86_64.tar.gz -o openleet.tar.gz && tar -xzf openleet.tar.gz",
+        "wget": "wget -q https://github.com/srikar-up/openleet/releases/download/v0.5.0-beta/openleet_Darwin_x86_64.tar.gz -O openleet.tar.gz && tar -xzf openleet.tar.gz"
+      },
+      "arm64": {
+        "curl": "curl -fsSL https://github.com/srikar-up/openleet/releases/download/v0.5.0-beta/openleet_Darwin_arm64.tar.gz -o openleet.tar.gz && tar -xzf openleet.tar.gz",
+        "wget": "wget -q https://github.com/srikar-up/openleet/releases/download/v0.5.0-beta/openleet_Darwin_arm64.tar.gz -O openleet.tar.gz && tar -xzf openleet.tar.gz"
+      }
+    }
+  },
+  "links": {
+    "repository": "https://github.com/srikar-up/openleet",
+    "releases": "https://github.com/srikar-up/openleet/releases",
+    "readme": "https://github.com/srikar-up/openleet#readme",
+    "documentation": "https://github.com/srikar-up/openleet/tree/main/readme",
+    "issues": "https://github.com/srikar-up/openleet/issues",
+    "license": "https://github.com/srikar-up/openleet/blob/main/LICENSE",
+    "installer": "https://raw.githubusercontent.com/srikar-up/openleet/main/install.ps1",
+    "unixInstaller": "https://raw.githubusercontent.com/srikar-up/openleet/main/install.sh",
+    "versionFeed": "https://raw.githubusercontent.com/srikar-up/openleet/main/version.json"
+  }
+}

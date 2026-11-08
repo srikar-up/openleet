@@ -13,6 +13,9 @@ the acceptance block passes.
 - [ ] No claim of browser execution, automatic sync, or every-language support.
 - [ ] Every screenshot has descriptive alt text from `09-ASSETS.md`.
 - [ ] The install commands are copy-pasteable and tested.
+- [ ] `install.sh` works through both `curl` and `wget` on Linux and macOS.
+- [ ] Download links read [`version.json`](../../version.json); no release tag is
+      hardcoded in the page.
 - [ ] The footer includes the local-first sentence and a real contact link.
 - [ ] FAQ answers are consistent with the docs.
 

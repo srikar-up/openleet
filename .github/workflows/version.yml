@@ -1,0 +1,65 @@
+name: Version feed
+
+on:
+  release:
+    types: [published, prereleased, released, edited, unpublished, deleted]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: version-feed
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    name: Refresh version.json
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate version.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/generate-version-json.py
+
+      - name: Validate version.json
+        run: python scripts/validate-version-json.py
+
+      - name: Commit version.json
+        id: commit
+        run: |
+          if git diff --quiet -- version.json; then
+            echo "version.json is already current"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          tag=$(python -c 'import json; print(json.load(open("version.json"))["latest"]["tag"])')
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add version.json
+          git commit -m "chore: refresh version.json for $tag [skip ci]"
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Attach version.json to the release
+        if: github.event_name == 'workflow_dispatch' || github.event.action == 'published' || github.event.action == 'prereleased' || github.event.action == 'released'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          tag="$RELEASE_TAG"
+          if [ -z "$tag" ]; then
+            tag=$(python -c 'import json; print(json.load(open("version.json"))["latest"]["tag"])')
+          fi
+          gh release upload "$tag" version.json --clobber

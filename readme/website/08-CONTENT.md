@@ -177,11 +177,34 @@ with an unreadable label.`
 
 **Requirements:**
 
-- Go toolchain matching `go.mod` (Go 1.27)
+- A terminal of at least **100×30** cells
 - Optional: Python 3 and/or Go installed for code execution
 - Optional: Ollama or a cloud provider key for the coach
 
-### Windows (PowerShell)
+### Download
+
+Read the latest tag and direct asset URLs from
+[`version.json`](../../version.json) instead of hardcoding a release. The feed
+includes `downloads.windows.x86_64`, `downloads.windows.arm64`, and the matching
+Linux and macOS entries, plus SHA-256 checksums. See
+[`VERSION_FEED.md`](../VERSION_FEED.md) for the field list and a browser-side
+OS/arch snippet.
+
+**Windows installer:**
+
+```powershell
+irm https://raw.githubusercontent.com/srikar-up/openleet/main/install.ps1 | iex
+```
+
+**Linux / macOS installer:**
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/srikar-up/openleet/main/install.sh | bash
+# or
+wget -qO- https://raw.githubusercontent.com/srikar-up/openleet/main/install.sh | bash
+```
+
+### Windows (build from source)
 
 ```powershell
 git clone https://github.com/srikar-up/openleet.git
@@ -190,7 +213,7 @@ go build -o .\bin\openleet.exe .\cmd\openleet
 .\bin\openleet.exe
 ```
 
-### Linux / macOS
+### Linux / macOS (build from source)
 
 ```bash
 git clone https://github.com/srikar-up/openleet.git
@@ -198,6 +221,8 @@ cd openleet
 go build -o ./bin/openleet ./cmd/openleet
 ./bin/openleet
 ```
+
+Building requires Go 1.27.3 or newer.
 
 **First run:**
 
