@@ -77,7 +77,7 @@ go test ./... -count=1
 
 ## Documentation
 
-| | |
+| Doc | Covers |
 | :--- | :--- |
 | [Features](readme/FEATURES.md) | Full feature list and limitations |
 | [AI](readme/AI_PROVIDERS.md) | Provider setup and endpoints |
