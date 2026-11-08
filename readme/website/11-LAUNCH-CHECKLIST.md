@@ -47,7 +47,7 @@ the acceptance block passes.
 
 ## Performance
 
-- [ ] Hero image is preloaded and served as WebP/AVIF ≤ 300 KB.
+- [ ] Hero image is preloaded and served as WebP ≤ 120 KB.
 - [ ] Below-the-fold images lazy-load with explicit dimensions.
 - [ ] Total JS ≤ 100 KB gzipped for the landing page.
 - [ ] No layout shift from fonts: use `font-display: swap` and size-adjust.

@@ -69,6 +69,9 @@ checkout:
 ```bash
 bash scripts/capture-tui.sh roadmap
 bash scripts/capture-tui.sh settings openleet appearance
+
+# Convert the new PNG captures to WebP
+python scripts/convert-screenshots.py --delete
 ```
 
 Check at 100, 120, and 160 columns. The app must stay usable at its **100×30**

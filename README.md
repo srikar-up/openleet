@@ -14,7 +14,7 @@ Local-first · Python + Go · 12 themes · Windows, Linux, macOS
 
 </div>
 
-<img src="readme/screenshots/roadmap.png" alt="OpenLeet roadmap" width="100%">
+<img src="readme/screenshots/roadmap.webp" alt="OpenLeet roadmap" width="100%">
 
 ## Download
 
@@ -69,8 +69,8 @@ go test ./... -count=1
 ## Screenshots
 
 <div align="center">
-<img src="readme/screenshots/home.png" alt="OpenLeet home screen" width="49%">
-<img src="readme/screenshots/solve.png" alt="OpenLeet solve workspace" width="49%">
+<img src="readme/screenshots/home.webp" alt="OpenLeet home screen" width="49%">
+<img src="readme/screenshots/solve.webp" alt="OpenLeet solve workspace" width="49%">
 </div>
 
 [All screenshots and themes →](readme/SCREENSHOTS.md)

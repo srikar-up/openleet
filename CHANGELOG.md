@@ -14,6 +14,14 @@ The first public beta.
 - A Windows installer that selects the matching architecture, accepts
   prereleases, and verifies the downloaded checksum.
 
+### Changed
+
+- Screenshot library converted to WebP at quality 88: about 5.5 MB of PNGs
+  became about 1.2 MB, with every image keeping its native dimensions.
+- Refreshed the roadmap, solve, stats, and settings captures against the
+  current one-row header.
+- Added the twelve-palette Home gallery under `readme/screenshots/theme/`.
+
 ### Verification
 
 - `go vet ./...` and `go test ./... -count=1` pass.

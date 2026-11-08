@@ -35,18 +35,18 @@ Install            AI providers
 
 | # | Section | Purpose | Asset |
 | :-- | :--- | :--- | :--- |
-| 1 | Hero | Promise + install CTA | `home.png` or `roadmap.png` |
+| 1 | Hero | Promise + install CTA | `home.webp` or `roadmap.webp` |
 | 2 | Proof strip | 4 facts: 17 problems · 12 themes · Python + Go · local-first | text only |
 | 3 | Problem | "Browser tabs are not a dojo" | text |
-| 4 | The loop | 4 steps: Pick → Solve → Run → Ask | `solve.png` |
-| 5 | Feature grid | 6 cards: roadmap, runner, coach, stats, themes, settings | `roadmap.png`, `stats.png` |
+| 4 | The loop | 4 steps: Pick → Solve → Run → Ask | `solve.webp` |
+| 5 | Feature grid | 6 cards: roadmap, runner, coach, stats, themes, settings | `roadmap.webp`, `stats.webp` |
 | 6 | Screens band | Horizontal scroll of 4 screens with captions | gallery |
-| 7 | Themes | Swatch strip + palette cards | `settings-dracula-appearance.png` |
+| 7 | Themes | Swatch strip + palette cards | `settings-dracula-appearance.webp` |
 | 8 | Keyboard strip | Show 6 shortcuts as keycaps | text |
-| 9 | Privacy | Local vault, optional sync | `settings-account.png` |
+| 9 | Privacy | Local vault, optional sync | `settings-account.webp` |
 | 10 | Install | Tabs: Windows / Linux / macOS | code blocks |
 | 11 | FAQ | 6 questions | text |
-| 12 | Footer CTA | Wordmark + install command | `home-light.png` |
+| 12 | Footer CTA | Wordmark + install command | `home-light.webp` |
 
 ### Home wireframe
 
@@ -62,7 +62,7 @@ Install            AI providers
 │  One binary · No account · Works offline                      │
 │                                                              │
 │  ┌──────────────────────────── screenshot ─────────────────┐ │
-│  │  roadmap.png                                             │ │
+│  │  roadmap.webp                                             │ │
 │  └──────────────────────────────────────────────────────────┘ │
 ├──────────────────────────────────────────────────────────────┤
 │  17 problems · 12 themes · Python + Go · 100% local           │
@@ -107,7 +107,7 @@ Optional later: `/changelog`, `/docs` (link to the repo readme), `/about`.
 - **Primary CTA:** `Install OpenLeet` → scrolls to `#install`.
 - **Secondary CTA:** `See the screens` → scrolls to `#screens`.
 - **Trust line:** `No account required · Works offline · Windows, Linux, macOS`
-- **Visual:** full-bleed `roadmap.png` inside a 1px `border` frame, no fake
+- **Visual:** full-bleed `roadmap.webp` inside a 1px `border` frame, no fake
   browser chrome, caption `Roadmap — DSA · 3/17 solved`.
 
 ### Proof strip
@@ -129,7 +129,7 @@ Four steps, numbered `01–04`. Each step gets one sentence and one icon at most
 | 03 | Run | Real tests against your installed Python or Go. |
 | 04 | Ask | Socratic hints that ask the next question. |
 
-Pair with `solve.png` on the right (desktop) or below (mobile).
+Pair with `solve.webp` on the right (desktop) or below (mobile).
 
 ### Feature grid
 
@@ -150,10 +150,10 @@ Four cards in a horizontal scroller. Each: image, screen name, one line.
 
 | Card | Image | Caption |
 | :--- | :--- | :--- |
-| Home | `home.png` | Search, language, solved count, and quick actions. |
-| Roadmap | `roadmap.png` | A winding grid with filters and solved state. |
-| Solve | `solve.png` | Statement, editor, and console, together. |
-| Stats | `stats.png` | Streaks, heatmap, difficulty split. |
+| Home | `home.webp` | Search, language, solved count, and quick actions. |
+| Roadmap | `roadmap.webp` | A winding grid with filters and solved state. |
+| Solve | `solve.webp` | Statement, editor, and console, together. |
+| Stats | `stats.webp` | Streaks, heatmap, difficulty split. |
 
 ### Themes band
 
@@ -173,7 +173,7 @@ Copy: `Every action has a key. Nothing is buried in a menu.`
 
 ### Privacy band
 
-Two columns: copy left, `settings-account.png` right.
+Two columns: copy left, `settings-account.webp` right.
 
 - `Local by default. Your progress, code buffers, and layout stay on disk.`
 - `Provider keys live in an encrypted local vault.`

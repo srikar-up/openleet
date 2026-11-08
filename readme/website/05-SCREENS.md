@@ -44,7 +44,7 @@ breadcrumb text changes.
 
 ## Home
 
-![Home](../screenshots/home.png)
+![Home](../screenshots/home.webp)
 
 **Purpose:** a quiet landing screen that gets you into the loop in one keystroke.
 
@@ -90,12 +90,12 @@ breadcrumb text changes.
 
 **States:** empty search, no results, guest/signed-in label, status toast.
 
-**Screenshots:** `home.png` (OpenLeet), `home-light.png`, `home-gruvbox.png`,
-`home-dracula.png`, `home-tron.png`.
+**Screenshots:** `home.webp` (OpenLeet), `home-light.webp`, `home-gruvbox.webp`,
+`home-dracula.webp`, `home-tron.webp`.
 
 ## Roadmap
 
-![Roadmap](../screenshots/roadmap.png)
+![Roadmap](../screenshots/roadmap.webp)
 
 **Purpose:** browse the problem set as a winding path, filter it, and launch a
 problem.
@@ -136,11 +136,11 @@ problem.
 - `F2` opens the selected problem; `Shift+Tab` returns to Home; `F3` Stats.
 - `/filter` and `/topic` quick actions apply filters in place.
 
-**Screenshot:** `roadmap.png` (dark), `roadmap-dracula.png`.
+**Screenshot:** `roadmap.webp` (dark), `roadmap-dracula.webp`.
 
 ## Solve workspace
 
-![Solve](../screenshots/solve.png)
+![Solve](../screenshots/solve.webp)
 
 **Purpose:** the practice loop in one surface: read, write, run, ask.
 
@@ -190,11 +190,11 @@ problem.
 **States:** ready, running (progress banner), pass, fail with diff, timeout,
 unsupported language, provider stream open/streaming/error.
 
-**Screenshots:** `solve.png` (dark), `solve-light.png`, `solve-tron.png`.
+**Screenshots:** `solve.webp` (dark), `solve-light.webp`, `solve-tron.webp`.
 
 ## Stats
 
-![Stats](../screenshots/stats.png)
+![Stats](../screenshots/stats.webp)
 
 **Purpose:** show whether practice is compounding.
 
@@ -234,11 +234,11 @@ unsupported language, provider stream open/streaming/error.
 
 **Interactions:** `F3`/`Esc` returns; `F2` Solve; `Ctrl+P` commands.
 
-**Screenshots:** `stats.png`, `stats-light.png`.
+**Screenshots:** `stats.webp`, `stats-light.webp`.
 
 ## Settings
 
-![Settings — Appearance](../screenshots/settings-appearance.png)
+![Settings — Appearance](../screenshots/settings-appearance.webp)
 
 **Purpose:** one schema-driven surface for every preference.
 
@@ -285,13 +285,13 @@ unsupported language, provider stream open/streaming/error.
   hints are rendered once by the shared app footer.
 - Under 100 columns the rail becomes tabs.
 
-**Screenshots:** `settings-general.png`, `settings-appearance.png`,
-`settings-ai.png`, `settings-account.png`, `settings-data.png`,
-`settings-dracula-appearance.png`.
+**Screenshots:** `settings-general.webp`, `settings-appearance.webp`,
+`settings-ai.webp`, `settings-account.webp`, `settings-data.webp`,
+`settings-dracula-appearance.webp`.
 
 ## Quick actions and palettes
 
-![Quick actions](../screenshots/quick-actions.png)
+![Quick actions](../screenshots/quick-actions.webp)
 
 `Ctrl+P` (anywhere) or `/` (Home) opens a centered palette over a dimmed
 backdrop. Commands apply in place; only `/settings` and `/roadmap` navigate.
@@ -301,7 +301,7 @@ backdrop. Commands apply in place; only `/settings` and `/roadmap` navigate.
   apply on Enter, revert on Esc.
 - A full command typed in the palette executes directly, e.g. `/settings ai`.
 
-![Theme popup](../screenshots/theme-popup.png)
+![Theme popup](../screenshots/theme-popup.webp)
 
 The theme picker previews live over the current screen. The editor buffer,
 cursor, and test results underneath are untouched.

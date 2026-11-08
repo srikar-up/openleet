@@ -18,7 +18,7 @@ Open Graph:
 ```text
 og:title       OpenLeet — a terminal-first DSA dojo
 og:description Real tests, Socratic hints, 12 themes. Your terminal, your toolchain.
-og:image       /assets/og-home.png   (use home.png, 1200×630 crop)
+og:image       /assets/og-home.png   (use home.webp, 1200×630 crop)
 og:type        website
 twitter:card   summary_large_image
 ```
