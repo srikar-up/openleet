@@ -11,9 +11,9 @@ columns depend on the capture width: 1920px ≈ 184 columns, 1670px ≈ 160 colu
 | :--- | :--- | :--- | :--- | :--- |
 | `home.png` | 1920×1080 · 65 KB | OpenLeet | Home: wordmark, search box, mini stats, plain header | Hero fallback, Home feature card |
 | `home-light.png` | 1920×1080 · 67 KB | OpenLeet Light | Home in light mode | Light-mode section, theme toggle proof |
-| `home-gruvbox.png` | 1670×900 · 67 KB | Gruvbox | Home at 160 columns | Theme gallery card |
-| `home-dracula.png` | 1670×900 · 66 KB | Dracula | Home at 160 columns | Theme gallery card |
-| `home-tron.png` | 1670×900 · 67 KB | Tron | Home at 160 columns | Theme gallery card |
+| `home-gruvbox.png` | 1920×1080 · 69 KB | Gruvbox | Home at the standard capture size | Theme gallery card |
+| `home-dracula.png` | 1920×1080 · 67 KB | Dracula | Home at the standard capture size | Theme gallery card |
+| `home-tron.png` | 1920×1080 · 68 KB | Tron | Home at the standard capture size | Theme gallery card |
 | `roadmap.png` | 1920×1080 · 342 KB | OpenLeet | Winding roadmap, topic rail, inspector | **Primary hero image** |
 | `roadmap-dracula.png` | 1920×1080 · 354 KB | Dracula | Roadmap in Dracula | Theme section |
 | `solve.png` | 1920×1080 · 384 KB | OpenLeet | Three-pane solve workspace + session rail | "The loop" section |
@@ -27,6 +27,30 @@ columns depend on the capture width: 1920px ≈ 184 columns, 1670px ≈ 160 colu
 | `settings-ai.png` | 1920×1080 · 193 KB | OpenLeet | Provider cards, coach/model assignment | AI feature card |
 | `settings-account.png` | 1920×1080 · 152 KB | OpenLeet | Signed-out account and sync | Privacy section |
 | `settings-data.png` | 1920×1080 · 177 KB | OpenLeet | Export, import, backup, reset | Data tools card |
+
+## Theme gallery
+
+[`theme/`](../screenshots/theme/README.md) contains the Home screen in all
+twelve palettes at **1920×1080**. Use these for a theme switcher or gallery
+band; keep the native size and do not crop or recolour. Paths below are relative
+to `readme/screenshots`.
+
+| File | Theme |
+| :--- | :--- |
+| `theme/openleet.png` | OpenLeet |
+| `theme/openleet-light.png` | OpenLeet Light |
+| `theme/opencode.png` | OpenCode |
+| `theme/catppuccin-mocha.png` | Catppuccin Mocha |
+| `theme/catppuccin-latte.png` | Catppuccin Latte |
+| `theme/dracula.png` | Dracula |
+| `theme/flexoki.png` | Flexoki |
+| `theme/gruvbox.png` | Gruvbox |
+| `theme/monokai.png` | Monokai |
+| `theme/onedark.png` | One Dark |
+| `theme/tokyonight.png` | Tokyo Night |
+| `theme/tron.png` | Tron |
+
+Each file has descriptive alt text in the theme index.
 
 ## Modal and palette captures
 

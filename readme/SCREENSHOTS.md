@@ -24,6 +24,14 @@ stats line stays readable in both modes.
 
 The same header and stats line in Gruvbox, Dracula, and Tron.
 
+## Theme gallery
+
+Every built-in palette on the Home screen, all at **1920×1080**:
+[open the theme gallery](screenshots/theme/README.md).
+
+<img src="screenshots/theme/catppuccin-latte.png" alt="OpenLeet home screen in Catppuccin Latte" width="49%">
+<img src="screenshots/theme/monokai.png" alt="OpenLeet home screen in Monokai" width="49%">
+
 ## Header focus state
 
 <img src="screenshots/home-focus.png" alt="OpenLeet header with keyboard focus on the account label and an Account tooltip" width="100%">
@@ -68,6 +76,9 @@ Solved counter, activity heatmap, best streak, active days, difficulty breakdown
 The theme gallery lives in Settings → Appearance. Moving the cursor previews a
 palette live; Enter applies, Esc reverts. Light mode ships as `OpenLeet Light`
 and `Catppuccin Latte`.
+
+See every palette on the Home screen at one size:
+[theme gallery](screenshots/theme/README.md).
 
 ## Light mode
 
