@@ -6,6 +6,15 @@ size, encoded at quality 88. They were captured from a real binary with VHS at
 capture width: 1920px ≈ 184 columns, 1670px ≈ 160 columns, 1250px ≈ 120 columns,
 1050px ≈ 100 columns.
 
+## Trailer
+
+| File | Size | What it shows | Suggested use |
+| :--- | :--- | :--- | :--- |
+| `readme/trailer.mp4` | 1920×1080 · 42s · 3.1 MB | Brand and product trailer, H.264 | README hero; keep the repo file as the download fallback |
+
+GitHub only renders inline MP4 playback from a `user-attachments` URL. The
+README embeds that URL and links `readme/trailer.mp4` as the fallback.
+
 ## Canonical screenshots
 
 | File | Size | Theme | What it shows | Suggested use |
@@ -15,7 +24,7 @@ capture width: 1920px ≈ 184 columns, 1670px ≈ 160 columns, 1250px ≈ 120 co
 | `home-gruvbox.webp` | 1920×1080 · 18 KB | Gruvbox | Home at the standard capture size | Theme gallery card |
 | `home-dracula.webp` | 1920×1080 · 18 KB | Dracula | Home at the standard capture size | Theme gallery card |
 | `home-tron.webp` | 1920×1080 · 19 KB | Tron | Home at the standard capture size | Theme gallery card |
-| `roadmap.webp` | 1920×1080 · 84 KB | OpenLeet | Winding roadmap, topic rail, inspector | **Primary hero image** |
+| `roadmap.webp` | 1920×1080 · 84 KB | OpenLeet | Winding roadmap, topic rail, inspector | Hero fallback, roadmap feature card |
 | `roadmap-dracula.webp` | 1920×1080 · 83 KB | Dracula | Roadmap in Dracula | Theme section |
 | `solve.webp` | 1920×1080 · 93 KB | OpenLeet | Three-pane solve workspace + session rail | "The loop" section |
 | `solve-light.webp` | 1920×1080 · 94 KB | OpenLeet Light | Solve in light mode | Light-mode proof |
@@ -116,7 +125,8 @@ Use the screen name plus the concrete content. Keep it under ~140 characters.
 
 | Page area | Asset | Notes |
 | :--- | :--- | :--- |
-| Hero | `roadmap.webp` | Full width, native 16:9, 1px border, caption `Roadmap — DSA · 3/17 solved` |
+| Hero | `readme/trailer.mp4` | Full width, native 16:9, controls; fall back to `roadmap.webp` |
+| Roadmap section | `roadmap.webp` | Full width, native 16:9, caption `Roadmap — DSA · 3/17 solved` |
 | Loop section | `solve.webp` | Right column on desktop, below on mobile |
 | Feature grid | `home.webp`, `stats.webp` | Optional; the grid works without images |
 | Screens band | home, roadmap, solve, stats | Horizontal scroll on mobile |

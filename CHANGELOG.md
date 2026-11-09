@@ -27,6 +27,8 @@ The first public beta.
 - Refreshed the roadmap, solve, stats, and settings captures against the
   current one-row header.
 - Added the twelve-palette Home gallery under `readme/screenshots/theme/`.
+- Replaced the README hero image with the 42-second trailer player and kept
+  `readme/trailer.mp4` as the download fallback.
 
 ### Verification
 

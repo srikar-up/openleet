@@ -14,7 +14,9 @@ Local-first · Python + Go · 12 themes · Windows, Linux, macOS
 
 </div>
 
-<img src="readme/screenshots/roadmap.webp" alt="OpenLeet roadmap" width="100%">
+https://github.com/user-attachments/assets/d18856ba-c95d-4c75-9b2b-194e7a69424c
+
+<p align="center"><a href="readme/trailer.mp4"><strong>OpenLeet trailer</strong> — 42 seconds, MP4</a></p>
 
 ## Download
 

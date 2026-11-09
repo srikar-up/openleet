@@ -6,6 +6,11 @@ Most captures use `COLORTERM=truecolor` and a 1920×1080 tape at 16px font size.
 
 Gallery images are WebP at quality 88. The capture scripts write PNG receipts; `scripts/convert-screenshots.py` converts them.
 
+## Trailer
+
+The 42-second 1080p trailer is embedded at the top of the README. The source
+file is [`trailer.mp4`](trailer.mp4) (3.1 MB).
+
 ## Home
 
 <img src="screenshots/home.webp" alt="OpenLeet home screen" width="100%">
